@@ -1,21 +1,4 @@
 # SFFoodFinder
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `sf_food_finder` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:sf_food_finder, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/sf_food_finder>.
+This is a CLI app for finding places to eat in San Francisco.  Recommendations are currently limited to food trucks & push carts, but could be expanded to include restaurants at a later time.  This app uses a CSV, which is a [data dump of food truck & push cart permits](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) from [DataSF](https://data.sfgov.org/), so the recommendations are fixed.  The next logical step would be to switch from using the CSV to the actual SODA API, but we'll just use the CSV for now.
 
