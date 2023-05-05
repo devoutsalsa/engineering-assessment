@@ -8,8 +8,8 @@ defmodule SFFoodFinder.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: SFFoodFinder.Worker.start_link(arg)
-      # {SFFoodFinder.Worker, arg}
+      SFFoodFinder.Locations.KVStore,
+      SFFoodFinder.Locations.Bootstrapper
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
