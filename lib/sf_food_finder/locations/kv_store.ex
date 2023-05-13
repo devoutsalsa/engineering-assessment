@@ -11,6 +11,14 @@ defmodule SFFoodFinder.Locations.KVStore do
   end
 
   def start_link(_) do
-    Agent.start_link(fn -> [] end, name: __MODULE__)
+    results = Agent.start_link(fn -> [] end, name: __MODULE__)
+
+    "Mobile_Food_Facility_Permit.csv"
+    |> File.stream!()
+    |> CSV.decode!(headers: true)
+    |> Stream.map(&Location.new/1)
+    |> Enum.map(&insert_location/1)
+
+    results
   end
 end

@@ -9,7 +9,7 @@ defmodule SFFoodFinder.Application do
   def start(_type, _args) do
     children = [
       SFFoodFinder.Locations.KVStore,
-      SFFoodFinder.Locations.Bootstrapper
+      # SFFoodFinder.Locations.Bootstrapper
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
